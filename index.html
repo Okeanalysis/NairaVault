@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NairaVault — Your Crypto. Working for You.</title>
-  <meta name="description" content="Deposit any crypto. Invest in SEC-regulated Nigerian funds, NGX stocks, US stocks, and real estate. Earn daily returns — withdraw in crypto or local currency." />
+  <meta name="description" content="Deposit any crypto. Invest in SEC-regulated Nigerian funds, NGX stocks, US stocks, and real estate. Earn daily returns — withdraw in crypto or naira." />
   <meta property="og:title" content="NairaVault — Your Crypto. Working for You." />
   <meta property="og:description" content="The first platform where crypto holders invest in regulated Nigerian funds. Join the waitlist." />
   <meta property="og:type" content="website" />
@@ -309,7 +309,7 @@
   <section class="hero">
     <span class="hero-tag">Launching Soon</span>
     <h1>Your crypto.<br><span>Working for you.</span></h1>
-    <p>Deposit any crypto. Invest in SEC-regulated Nigerian funds, NGX stocks, US stocks, and real estate. Earn daily returns — withdraw in crypto or Local Currency.</p>
+    <p>Deposit any crypto. Invest in SEC-regulated Nigerian funds, NGX stocks, US stocks, and real estate. Earn daily returns — withdraw in crypto or naira.</p>
     <div class="stats-row">
       <div class="stat">
         <div class="stat-num">$8</div>
@@ -357,7 +357,7 @@
         <div class="step-num">04</div>
         <div>
           <h3>Withdraw your way</h3>
-          <p>Pull out anytime. Back to crypto to your wallet, or straight to your Local bank account. You choose.</p>
+          <p>Pull out anytime. Back to crypto to your wallet, or straight to your Nigerian bank account in naira. You choose.</p>
         </div>
       </div>
     </div>
@@ -380,19 +380,19 @@
         <div class="fund-icon ngx"><i class="ti ti-building-bank"></i></div>
         <div class="fund-name">NGX Stocks</div>
         <div class="fund-desc">Invest in top Nigerian companies on the Exchange — Dangote, GTBank, MTN Nigeria and more. Funded directly from crypto.</div>
-        <span class="fund-yield">Coming Soon</span>
+        <span class="fund-yield">Roadmap · Q3 2026</span>
       </div>
       <div class="fund-card">
         <div class="fund-icon us"><i class="ti ti-trending-up"></i></div>
         <div class="fund-name">US Stocks</div>
         <div class="fund-desc">Dollar-denominated exposure to Apple, Tesla, the S&amp;P 500 and thousands of US-listed assets. Diversify globally without leaving crypto.</div>
-        <span class="fund-yield">Coming Soon</span>
+        <span class="fund-yield">Roadmap · Q3 2026</span>
       </div>
       <div class="fund-card">
         <div class="fund-icon re"><i class="ti ti-building-estate"></i></div>
         <div class="fund-name">Real Estate</div>
         <div class="fund-desc">Fractional real estate investments via regulated partners including Risevest. Earn from property income without owning a building.</div>
-        <span class="fund-yield">Coming Soon</span>
+        <span class="fund-yield">Roadmap · Q4 2026</span>
       </div>
     </div>
   </section>
@@ -421,7 +421,7 @@
       <div class="why-card">
         <div class="why-icon"><i class="ti ti-cash"></i></div>
         <h3>Withdraw freely</h3>
-        <p>Get your money back as crypto to your wallet, or to your bank. Withdraw.</p>
+        <p>Get your money back as crypto to your wallet, or as naira to your bank. Withdraw anytime — no lock-up period.</p>
       </div>
     </div>
   </section>
@@ -536,8 +536,8 @@
       <div class="success-state" id="success-state">
         <div class="success-icon"><i class="ti ti-check"></i></div>
         <h3>You're on the list.</h3>
-        <p>We'll reach out as soon as early access opens. In the meantime — tell a friend who holds crypto and doesn't know what to do with it.</p>
-        <a href="https://twitter.com/intent/tweet?text=Just%20joined%20the%20NairaVault%20waitlist%20%E2%80%94%20finally%20a%20way%20to%20put%20idle%20crypto%20into%20regulated%20Nigerian%20investments.%20nairavault.com" target="_blank" class="share-btn">Share on X →</a>
+        <p>Redirecting you to our Telegram community now… Join to get updates, ask questions, and connect with early members.</p>
+        <a href="https://t.me/+6YxUCcyOASEyNjVk" target="_blank" class="share-btn">Join Telegram group →</a>
       </div>
 
     </div>
@@ -627,6 +627,9 @@
           document.getElementById('success-state').style.display = 'block';
           count++;
           updateCounter();
+          setTimeout(function() {
+            window.location.href = 'https://t.me/+6YxUCcyOASEyNjVk';
+          }, 2500);
         } else {
           btn.textContent = 'Something went wrong — try again';
           btn.disabled = false;
