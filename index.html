@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NairaVault — Your Crypto. Working for You.</title>
-  <meta name="description" content="Deposit any crypto. Invest in SEC-regulated Nigerian funds, NGX stocks, US stocks, and real estate. Earn daily returns — withdraw in crypto or naira." />
+  <meta name="description" content="Deposit any crypto. Earn 10–15% annual returns in dollars via regulated partners. Daily accruals. Withdraw in crypto anytime." />
   <meta property="og:title" content="NairaVault — Your Crypto. Working for You." />
-  <meta property="og:description" content="The first platform where crypto holders invest in regulated Nigerian funds. Join the waitlist." />
+  <meta property="og:description" content="The first platform where crypto holders earn regulated dollar returns. Join the waitlist." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -138,12 +138,14 @@
     }
     .fund-card:hover { border-color: var(--border); transform: translateY(-3px); }
     .fund-card.featured { border-color: rgba(201,168,76,0.35); background: var(--dark3); }
+    .fund-card.coming-soon { opacity: 0.65; }
     .fund-icon {
       width: 38px; height: 38px; border-radius: 9px;
       display: flex; align-items: center; justify-content: center;
       font-size: 17px; margin-bottom: 14px;
     }
-    .fund-icon.mmf { background: rgba(46,204,136,0.12); color: var(--success); }
+    .fund-icon.dollar { background: rgba(46,204,136,0.12); color: var(--success); }
+    .fund-icon.mmf { background: rgba(201,168,76,0.12); color: var(--gold); }
     .fund-icon.ngx { background: rgba(201,168,76,0.12); color: var(--gold); }
     .fund-icon.us  { background: rgba(90,171,240,0.12); color: #5AABF0; }
     .fund-icon.re  { background: rgba(224,112,112,0.12); color: #E07070; }
@@ -154,11 +156,42 @@
       background: rgba(201,168,76,0.1); border: 0.5px solid var(--border);
       display: inline-block; padding: 4px 10px; border-radius: 6px;
     }
+    .fund-yield.soon {
+      color: var(--muted);
+      background: rgba(138,141,154,0.1); border-color: rgba(138,141,154,0.2);
+    }
     .fund-badge {
       position: absolute; top: 14px; right: 14px;
       font-size: 10px; font-family: var(--mono); color: var(--gold);
       background: rgba(201,168,76,0.15); border: 0.5px solid var(--border);
       padding: 3px 9px; border-radius: 20px; letter-spacing: 0.05em;
+    }
+    .fund-badge.soon-badge {
+      color: var(--muted);
+      background: rgba(138,141,154,0.1); border-color: rgba(138,141,154,0.2);
+    }
+
+    /* daily accrual demo */
+    .accrual-demo {
+      background: var(--dark3); border: 0.5px solid var(--border);
+      border-radius: 12px; padding: 22px; margin-top: 32px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .accrual-label { font-size: 12px; color: var(--muted); margin-bottom: 4px; font-family: var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+    .accrual-value { font-family: var(--mono); font-size: 26px; color: var(--gold); font-weight: 500; }
+    .accrual-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .accrual-ticker {
+      font-family: var(--mono); font-size: 13px; color: var(--success);
+      background: rgba(46,204,136,0.1); border: 0.5px solid rgba(46,204,136,0.2);
+      padding: 6px 14px; border-radius: 8px;
+    }
+
+    /* crypto pills */
+    .crypto-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .crypto-pill {
+      font-size: 12px; font-family: var(--mono); color: var(--gold);
+      background: rgba(201,168,76,0.08); border: 0.5px solid var(--border);
+      padding: 5px 12px; border-radius: 20px;
     }
 
     /* WHY */
@@ -295,6 +328,7 @@
       .form-card { padding: 24px 20px; }
       .section { padding: 56px 20px; }
       .waitlist-section { padding: 56px 20px 60px; }
+      .accrual-demo { flex-direction: column; }
     }
   </style>
 </head>
@@ -309,15 +343,15 @@
   <section class="hero">
     <span class="hero-tag">Launching Soon</span>
     <h1>Your crypto.<br><span>Working for you.</span></h1>
-    <p>Deposit any crypto. Invest in SEC-regulated Nigerian funds, NGX stocks, US stocks, and real estate. Earn daily returns — withdraw in crypto or naira.</p>
+    <p>Deposit any crypto. Earn 10–15% annual returns in dollars via regulated partners. Daily accruals. Withdraw in crypto anytime — no bank required.</p>
     <div class="stats-row">
       <div class="stat">
-        <div class="stat-num">$8</div>
+        <div class="stat-num">$10</div>
         <div class="stat-label">Min. to start</div>
       </div>
       <div class="stat">
-        <div class="stat-num">17%+</div>
-        <div class="stat-label">MMF est. yield</div>
+        <div class="stat-num">10–15%</div>
+        <div class="stat-label">Est. annual yield</div>
       </div>
       <div class="stat">
         <div class="stat-num">33M+</div>
@@ -336,30 +370,39 @@
         <div class="step-num">01</div>
         <div>
           <h3>Deposit any crypto</h3>
-          <p>Send BTC, ETH, USDT, BNB, SOL or any major coin. Minimum $8. No naira, no bank transfer, no FX stress.</p>
+          <p>Send BTC, ETH, USDT, BNB, SOL or any major coin. Minimum $10. No naira, no bank transfer, no FX stress.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <div>
           <h3>Choose your investment</h3>
-          <p>Pick from SEC-regulated money market funds, Nigerian NGX stocks, US stocks, or real estate. One tap to invest.</p>
+          <p>Pick from dollar fixed income, real estate, US stocks, and more — all powered by regulated partners. One tap to invest.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <div>
           <h3>Watch it grow daily</h3>
-          <p>Returns accumulate daily in your dashboard. Full transparency — see exactly what your money is doing and earning in real time.</p>
+          <p>Returns accrue daily in your dashboard. Full transparency — see exactly what your money is earning in real time, every single day.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
         <div>
-          <h3>Withdraw your way</h3>
-          <p>Pull out anytime. Back to crypto to your wallet, or straight to your Nigerian bank account in naira. You choose.</p>
+          <h3>Withdraw in crypto</h3>
+          <p>Pull out anytime. Your returns come back as USDT or your preferred crypto — straight to your wallet. No bank account needed.</p>
         </div>
       </div>
+    </div>
+
+    <div class="accrual-demo">
+      <div>
+        <div class="accrual-label">Your balance · Live accrual</div>
+        <div class="accrual-value" id="accrual-val">$1,003.84</div>
+        <div class="accrual-sub">$1,000 deposited · 12% annual rate</div>
+      </div>
+      <div class="accrual-ticker" id="accrual-tick">+$0.33 today</div>
     </div>
   </section>
 
@@ -367,32 +410,50 @@
 
   <section class="section">
     <p class="section-label">What you can invest in</p>
-    <h2 class="section-title">Four asset classes.<br>One crypto wallet.</h2>
+    <h2 class="section-title">Start in dollars.<br>More coming soon.</h2>
     <div class="funds-grid">
       <div class="fund-card featured">
-        <span class="fund-badge">Launch</span>
-        <div class="fund-icon mmf"><i class="ti ti-shield-check"></i></div>
-        <div class="fund-name">Money Market Fund</div>
-        <div class="fund-desc">Low-risk, SEC-regulated. Invests in treasury bills, commercial papers, and term deposits. Daily returns credited to your account.</div>
-        <span class="fund-yield">~17% est. annual yield</span>
+        <span class="fund-badge">Live at launch</span>
+        <div class="fund-icon dollar"><i class="ti ti-currency-dollar"></i></div>
+        <div class="fund-name">Dollar Fixed Income</div>
+        <div class="fund-desc">Earn 10–15% annual returns in dollars via regulated partners including Risevest and Cowrywise. Low-risk, dollar-denominated, daily accruals credited to your account.</div>
+        <span class="fund-yield">10–15% est. annual yield</span>
       </div>
-      <div class="fund-card">
+      <div class="fund-card coming-soon">
+        <span class="fund-badge soon-badge">Coming Soon</span>
+        <div class="fund-icon mmf"><i class="ti ti-shield-check"></i></div>
+        <div class="fund-name">Naira Money Market Fund</div>
+        <div class="fund-desc">SEC-regulated Nigerian MMFs investing in treasury bills, commercial papers, and term deposits. High naira yields — coming once our naira infrastructure is live.</div>
+        <span class="fund-yield soon">~17% est. annual yield</span>
+      </div>
+      <div class="fund-card coming-soon">
+        <span class="fund-badge soon-badge">Roadmap · Q3 2026</span>
         <div class="fund-icon ngx"><i class="ti ti-building-bank"></i></div>
         <div class="fund-name">NGX Stocks</div>
-        <div class="fund-desc">Invest in top Nigerian companies on the Exchange — Dangote, GTBank, MTN Nigeria and more. Funded directly from crypto.</div>
-        <span class="fund-yield">Roadmap · Q3 2026</span>
+        <div class="fund-desc">Invest in top Nigerian companies — Dangote, GTBank, MTN Nigeria and more. Funded directly from crypto.</div>
+        <span class="fund-yield soon">Coming Soon</span>
       </div>
-      <div class="fund-card">
-        <div class="fund-icon us"><i class="ti ti-trending-up"></i></div>
-        <div class="fund-name">US Stocks</div>
-        <div class="fund-desc">Dollar-denominated exposure to Apple, Tesla, the S&amp;P 500 and thousands of US-listed assets. Diversify globally without leaving crypto.</div>
-        <span class="fund-yield">Roadmap · Q3 2026</span>
-      </div>
-      <div class="fund-card">
+      <div class="fund-card coming-soon">
+        <span class="fund-badge soon-badge">Roadmap · Q4 2026</span>
         <div class="fund-icon re"><i class="ti ti-building-estate"></i></div>
         <div class="fund-name">Real Estate</div>
         <div class="fund-desc">Fractional real estate investments via regulated partners including Risevest. Earn from property income without owning a building.</div>
-        <span class="fund-yield">Roadmap · Q4 2026</span>
+        <span class="fund-yield soon">Coming Soon</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 24px;">
+      <div class="section-label" style="margin-bottom: 10px;">Accepted crypto</div>
+      <div class="crypto-pills">
+        <span class="crypto-pill">USDT</span>
+        <span class="crypto-pill">USDC</span>
+        <span class="crypto-pill">BTC</span>
+        <span class="crypto-pill">ETH</span>
+        <span class="crypto-pill">BNB</span>
+        <span class="crypto-pill">SOL</span>
+        <span class="crypto-pill">TRX</span>
+        <span class="crypto-pill">XRP</span>
+        <span class="crypto-pill">+ more</span>
       </div>
     </div>
   </section>
@@ -405,23 +466,23 @@
     <div class="why-grid">
       <div class="why-card">
         <div class="why-icon"><i class="ti ti-lock"></i></div>
-        <h3>SEC-regulated funds</h3>
-        <p>Your money goes into licensed, regulated Nigerian investment funds — not a DeFi protocol. Real oversight, real protection.</p>
+        <h3>Regulated partners only</h3>
+        <p>Your money goes into licensed, regulated investment platforms — not a DeFi protocol or unverified scheme. Real oversight, real protection.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><i class="ti ti-currency-bitcoin"></i></div>
         <h3>Any crypto accepted</h3>
-        <p>BTC, ETH, USDT, BNB, SOL and more. You don't need to sell to naira first. We handle the conversion behind the scenes.</p>
+        <p>USDT, BTC, ETH, BNB, SOL and more. You don't need to sell to naira first. We handle the conversion behind the scenes.</p>
       </div>
       <div class="why-card">
         <div class="why-icon"><i class="ti ti-world"></i></div>
         <h3>Built for diaspora too</h3>
-        <p>Nigerians abroad can invest back home using USDT — no Nigerian bank account, no FX headache, no Western Union.</p>
+        <p>Nigerians abroad can invest using USDT — no Nigerian bank account, no FX headache, no Western Union fees eating your returns.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon"><i class="ti ti-cash"></i></div>
-        <h3>Withdraw freely</h3>
-        <p>Get your money back as crypto to your wallet, or as naira to your bank. Withdraw anytime — no lock-up period.</p>
+        <div class="why-icon"><i class="ti ti-chart-line"></i></div>
+        <h3>Daily accruals, always visible</h3>
+        <p>Watch your balance grow every single day. No waiting until month-end to see your returns — full real-time visibility in your dashboard.</p>
       </div>
     </div>
   </section>
@@ -505,10 +566,10 @@
           <label class="form-label" for="interest">Which investment option excites you most?</label>
           <select class="form-select" id="interest">
             <option value="" disabled selected>Pick one</option>
-            <option>Money Market Fund — stable daily returns</option>
+            <option>Dollar Fixed Income — stable daily returns in USD</option>
+            <option>Naira Money Market Fund — high naira yields</option>
             <option>NGX Stocks — Nigerian equities</option>
-            <option>US Stocks — dollar exposure</option>
-            <option>Real Estate — property income via Risevest</option>
+            <option>Real Estate — property income</option>
             <option>Mix of all of them</option>
           </select>
         </div>
@@ -517,7 +578,7 @@
           <label class="form-label" for="deposit">How much would you likely deposit first? (USD)</label>
           <select class="form-select" id="deposit">
             <option value="" disabled selected>Rough estimate is fine</option>
-            <option>Under $50</option>
+            <option>$10 – $50</option>
             <option>$50 – $200</option>
             <option>$200 – $500</option>
             <option>$500 – $2,000</option>
@@ -547,24 +608,35 @@
     <p>
       <strong>NairaVault</strong> is building toward SEC and CBN regulatory compliance.<br>
       This is an early access waitlist — not a live investment platform.<br>
-      Real estate powered by regulated partners including Risevest.<br>
+      Dollar fixed income powered by regulated partners including Risevest and Cowrywise.<br>
       &copy; 2026 NairaVault. All rights reserved.
     </p>
   </footer>
 
   <script>
     let count = 247;
-
     function updateCounter() {
       document.getElementById('counter').textContent = count.toLocaleString() + ' joined';
     }
-
     setInterval(function() {
-      if (Math.random() > 0.65) {
-        count++;
-        updateCounter();
-      }
+      if (Math.random() > 0.65) { count++; updateCounter(); }
     }, 9000);
+
+    // live accrual demo
+    const principal = 1000;
+    const annualRate = 0.12;
+    const dailyRate = annualRate / 365;
+    const startDays = 11.68;
+    let elapsed = startDays * 86400;
+    function updateAccrual() {
+      elapsed += 1;
+      const days = elapsed / 86400;
+      const balance = principal * (1 + dailyRate * days);
+      const todayEarned = principal * dailyRate * (elapsed / 86400 - Math.floor(elapsed / 86400));
+      document.getElementById('accrual-val').textContent = '$' + balance.toFixed(2);
+      document.getElementById('accrual-tick').textContent = '+$' + (principal * dailyRate).toFixed(4) + ' today';
+    }
+    setInterval(updateAccrual, 100);
 
     async function handleSubmit() {
       const fname = document.getElementById('fname').value.trim();
@@ -583,16 +655,12 @@
       fnameInput.classList.remove('error');
       emailError.classList.remove('show');
 
-      if (!fname) {
-        fnameInput.classList.add('error');
-        valid = false;
-      }
+      if (!fname) { fnameInput.classList.add('error'); valid = false; }
       if (!email || !email.includes('@') || !email.includes('.')) {
         emailInput.classList.add('error');
         emailError.classList.add('show');
         valid = false;
       }
-
       if (!valid) return;
 
       const cryptoHeld = [];
@@ -623,18 +691,13 @@
           body: formData
         });
 
-        if (true) {
-          document.getElementById('form-state').style.display = 'none';
-          document.getElementById('success-state').style.display = 'block';
-          count++;
-          updateCounter();
-          setTimeout(function() {
-            window.location.href = 'https://t.me/+6YxUCcyOASEyNjVk';
-          }, 2500);
-        } else {
-          btn.textContent = 'Something went wrong — try again';
-          btn.disabled = false;
-        }
+        document.getElementById('form-state').style.display = 'none';
+        document.getElementById('success-state').style.display = 'block';
+        count++;
+        updateCounter();
+        setTimeout(function() {
+          window.location.href = 'https://t.me/+6YxUCcyOASEyNjVk';
+        }, 2500);
       } catch (err) {
         btn.textContent = 'Network error — try again';
         btn.disabled = false;
